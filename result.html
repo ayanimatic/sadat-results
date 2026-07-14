@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Result — Department of Mathematics</title>
+<script>
+  (function () {
+    var t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app-shell page-fade-in">
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Result Portal home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5-10-4.5Z"/><path d="M6 11.6v4.5c0 1 2.7 2.4 6 2.4s6-1.4 6-2.4v-4.5"/><path d="M21 9.5v6"/></svg>
+      </span>
+      <span>Result Portal</span>
+    </a>
+  </header>
+
+  <main>
+    <!-- Skeleton loader shown while JSON loads -->
+    <div class="skeleton-wrap" id="skeletonWrap">
+      <div class="skel skel-card"></div>
+      <div class="skel-grid">
+        <div class="skel skel-tile"></div>
+        <div class="skel skel-tile"></div>
+        <div class="skel skel-tile"></div>
+        <div class="skel skel-tile"></div>
+      </div>
+    </div>
+
+    <!-- Error / not found state -->
+    <div class="state-message" id="errorState" hidden>
+      <div class="state-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+      </div>
+      <h2 id="errorTitle">Result not found</h2>
+      <p id="errorDesc">We couldn't find a result matching your search. Please go back and try again.</p>
+      <a class="btn btn-accent" href="index.html">Back to search</a>
+    </div>
+
+    <!-- Main result content -->
+    <div class="result-wrap" id="resultContent" hidden>
+      <section class="card student-card" id="studentCard" aria-label="Student overview"></section>
+
+      <div class="meta-strip" id="metaStrip"></div>
+
+      <h2 class="section-title">
+        Subjects
+        <span class="count-badge" id="subjectCount"></span>
+      </h2>
+      <div class="table-card">
+        <table class="subj-table" id="subjectTable">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th class="num">Marks</th>
+              <th class="num">Grade</th>
+              <th class="num">Point</th>
+              <th class="num">Credit</th>
+            </tr>
+          </thead>
+          <tbody id="subjectTableBody"></tbody>
+        </table>
+      </div>
+      <p class="table-scroll-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+        Swipe to see Marks, Grade, Point &amp; Credit
+      </p>
+
+      <h2 class="section-title">Statistics</h2>
+      <div class="stats-grid" id="statsGrid"></div>
+      <div class="percentile-banner" id="percentileBanner"></div>
+
+      <h2 class="section-title">Performance vs Class</h2>
+      <div class="card chart-card">
+        <canvas id="radarChart" width="320" height="320" role="img" aria-label="Radar chart comparing your marks with the class average across theory subjects"></canvas>
+        <div class="chart-legend">
+          <span class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span>You</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--text-tertiary)"></span>Class average</span>
+        </div>
+      </div>
+
+      <h2 class="section-title">Subject Comparison</h2>
+      <div class="compare-list" id="compareList"></div>
+
+    </div>
+  </main>
+
+  <div class="action-bar" id="actionBar" hidden>
+    <a class="btn" id="newSearchBtn" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      New Search
+    </a>
+    <button class="btn btn-accent" id="downloadBtn" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+      Download PNG
+    </button>
+  </div>
+</div>
+
+<!-- Hidden printable / exportable marksheet card -->
+<div id="printArea">
+  <div class="print-card" id="printCard"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/chart.js"></script>
+<script src="assets/js/result.js"></script>
+</body>
+</html>

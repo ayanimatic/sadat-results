@@ -1,0 +1,27 @@
+{
+  "examName": "Test Examination 1",
+  "examYear": 2026,
+  "academicYear": "Honours 2nd Year",
+  "subjects": [
+    { "code": "223701", "name": "Calculus - II", "credit": 4, "type": "theory", "fullMarks": 80 },
+    { "code": "223703", "name": "Ordinary Differential Equations", "credit": 4, "type": "theory", "fullMarks": 80 },
+    { "code": "223705", "name": "Computer Programming - Fortran", "credit": 4, "type": "theory", "fullMarks": 80 },
+    { "code": "222707", "name": "Physics - III", "credit": 4, "type": "theory", "fullMarks": 80 },
+    { "code": "222807", "name": "General Chemistry - II", "credit": 4, "type": "theory", "fullMarks": 80 },
+    { "code": "222809", "name": "Environmental Chemistry", "credit": 2, "type": "theory", "fullMarks": 50 },
+    { "code": "223609", "name": "Methods of Statistics", "credit": 4, "type": "theory", "fullMarks": 80 },
+    { "code": "221109", "name": "English Compulsory", "credit": 0, "type": "theory", "fullMarks": 100 }
+  ],
+  "students": [
+    { "registration": "2023223401", "name": "Arif Hossain", "marks": { "223701": 70, "223703": 68, "223705": 65, "222707": 60, "222807": 66, "222809": 38, "223609": 69, "221109": 78 } },
+    { "registration": "2023223402", "name": "Nabila Rahman", "marks": { "223701": 75, "223703": 78, "223705": 72, "222707": 70, "222807": 74, "222809": 44, "223609": 76, "221109": 85 } },
+    { "registration": "2023223403", "name": "Shafiul Alam", "marks": { "223701": 58, "223703": 55, "223705": 60, "222707": 52, "222807": 57, "222809": 30, "223609": 54, "221109": 60 } },
+    { "registration": "2023223404", "name": "Mim Akter", "marks": { "223701": 64, "223703": 60, "223705": 58, "222707": 62, "222807": 59, "222809": 33, "223609": 61, "221109": 70 } },
+    { "registration": "2023223405", "name": "Rakibul Islam", "marks": { "223701": 30, "223703": 28, "223705": 35, "222707": 32, "222807": 27, "222809": 15, "223609": 31, "221109": 38 } },
+    { "registration": "2023223406", "name": "Tania Sultana", "marks": { "223701": 80, "223703": 76, "223705": 79, "222707": 74, "222807": 78, "222809": 47, "223609": 77, "221109": 92 } },
+    { "registration": "2023223407", "name": "Emon Chowdhury", "marks": { "223701": 48, "223703": 50, "223705": 46, "222707": 44, "222807": 49, "222809": 24, "223609": 47, "221109": 52 } },
+    { "registration": "2023223408", "name": "Priya Das", "marks": { "223701": 69, "223703": 71, "223705": 66, "222707": 68, "222807": 65, "222809": 41, "223609": 70, "221109": 80 } },
+    { "registration": "2023223409", "name": "Kamrul Hasan", "marks": { "223701": 38, "223703": 41, "223705": 36, "222707": 33, "222807": 40, "222809": 19, "223609": 35, "221109": 44 } },
+    { "registration": "2023223410", "name": "Sumaiya Khatun", "marks": { "223701": 56, "223703": 53, "223705": 59, "222707": 55, "222807": 52, "222809": 28, "223609": 57, "221109": 63 } }
+  ]
+}

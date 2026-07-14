@@ -1,0 +1,15 @@
+{
+  "years": {
+    "2026": {
+      "exams": [
+        {
+          "id": "test-1",
+          "file": "test-1.json",
+          "examName": "Test Examination 1",
+          "academicYear": "Honours 2nd Year",
+          "type": "test"
+        }
+      ]
+    }
+  }
+}

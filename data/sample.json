@@ -1,0 +1,53 @@
+{
+  "_note": "REFERENCE ONLY. This file is NOT wired into data/manifest.json, so the app will never load it. It exists purely so you can see the exact shape a real exam JSON file needs. Copy an existing file in data/<year>/ as your starting point, not this one.",
+
+  "examName": "Incourse Examination 1",
+  "examYear": 2026,
+  "academicYear": "Honours 2nd Year",
+
+  "subjects": [
+    {
+      "code": "221201",
+      "name": "Real Analysis",
+      "credit": 4,
+      "type": "theory"
+    },
+    {
+      "code": "221206",
+      "name": "Numerical Methods Lab",
+      "credit": 2,
+      "type": "practical"
+    }
+  ],
+
+  "students": [
+    {
+      "registration": "2023123456",
+      "name": "Ayaan Ahmed",
+      "marks": {
+        "221201": 88,
+        "221206": 54
+      }
+    },
+    {
+      "registration": "2023123457",
+      "name": "Nusrat Jahan",
+      "marks": {
+        "221201": 76,
+        "221206": 60
+      }
+    }
+  ],
+
+  "_fieldNotes": {
+    "examName": "Shown as the exam title on the results page, e.g. 'Incourse Examination 1' or 'Test Examination 2'.",
+    "examYear": "Numeric year, e.g. 2026. Must match the folder name under data/ that this file lives in.",
+    "academicYear": "Groups exams together, e.g. 'Honours 2nd Year'. Must match exactly across exams you want listed under the same year.",
+    "subjects": "One entry per subject. 'code' is the key used to look up marks in each student's 'marks' object, so it must match exactly. 'type' is 'theory' or 'practical' — this still controls SGPA/chart calculations (practical subjects can be excluded from those), it just no longer shows as a badge in the subjects table.",
+    "credit": "Credit hours for the subject, used in SGPA calculation.",
+    "students": "One entry per student. 'marks' keys must match a subject 'code' above. Any subject with no matching key defaults to 0 marks.",
+    "registration": "Used as the unique lookup value when a student searches for their result."
+  },
+
+  "_toAddANewExam": "1) Copy this shape into a new file at data/<year>/<exam-id>.json (drop the _note/_fieldNotes/_toAddANewExam keys). 2) Add one entry for it inside data/manifest.json under the matching year. That's it — no app code changes needed."
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Result Portal — Department of Mathematics</title>
+<meta name="description" content="Check your examination results for the Department of Mathematics (Honours).">
+<script>
+  // Apply saved theme before first paint to avoid a flash of wrong theme.
+  (function () {
+    var t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Result Portal home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5-10-4.5Z"/><path d="M6 11.6v4.5c0 1 2.7 2.4 6 2.4s6-1.4 6-2.4v-4.5"/><path d="M21 9.5v6"/></svg>
+      </span>
+      <span>Result Portal</span>
+    </a>
+  </header>
+
+  <main>
+    <div class="hero-wrap">
+      <div class="hero-inner">
+
+        <div class="hero-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            <path d="M9 7h7M9 11h5"/>
+          </svg>
+        </div>
+
+        <h1 class="hero-title">Result Portal</h1>
+        <p class="hero-sub">Department of Mathematics · Honours</p>
+
+        <form class="search-card" id="searchForm" novalidate>
+
+          <div class="field">
+            <label class="field-label" for="academicYear">Academic Year</label>
+            <div class="field-select-wrap">
+              <select class="field-select" id="academicYear" required>
+                <option value="" disabled selected>Select academic year</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="examYear">Exam Year</label>
+            <div class="field-select-wrap">
+              <select class="field-select" id="examYear" required disabled>
+                <option value="" disabled selected>Select academic year first</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="examSelect">Exam</label>
+            <div class="field-select-wrap">
+              <select class="field-select" id="examSelect" required disabled>
+                <option value="" disabled selected>Select exam year first</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="registration">Registration Number</label>
+            <input class="field-input" id="registration" type="text" inputmode="numeric" autocomplete="off" placeholder="e.g. 2023123456" required>
+          </div>
+
+          <div class="field-error" id="formError" role="alert" aria-live="polite"></div>
+
+          <button class="search-submit" id="searchSubmit" type="submit">
+            <span class="submit-label">Search Result</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <p class="hero-footer">Results are generated instantly from official exam records.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>
