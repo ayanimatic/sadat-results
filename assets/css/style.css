@@ -170,18 +170,15 @@ main { flex: 1; }
 }
 
 .hero-logo {
-  width: 68px;
-  height: 68px;
-  border-radius: 20px;
-  background: linear-gradient(150deg, var(--accent) 0%, #FFB157 100%);
+  width: 76px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 12px 32px -8px rgba(255, 130, 1, 0.5);
   margin-bottom: 22px;
   animation: pop-in var(--dur-slow) var(--ease-spring) both;
 }
-.hero-logo svg { width: 34px; height: 34px; color: #1a1a1a; }
+.hero-logo img { width: 100%; height: 100%; object-fit: contain; }
 
 .hero-title {
   font-family: var(--font-display);
@@ -801,12 +798,11 @@ main { flex: 1; }
   margin-bottom: 22px;
 }
 .pc-mark {
-  width: 46px; height: 46px; border-radius: 12px;
-  background: linear-gradient(150deg, #FF8201, #FFB157);
+  width: 46px; height: 46px;
   display: flex; align-items: center; justify-content: center;
-  color: #1a1200; flex-shrink: 0;
+  flex-shrink: 0;
 }
-.pc-mark svg { width: 24px; height: 24px; }
+.pc-mark img { width: 100%; height: 100%; object-fit: contain; }
 .pc-uni { font-size: 12.5px; color: #6E6E73; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
 .pc-dept { font-family: var(--font-display); font-size: 19px; font-weight: 800; letter-spacing: -0.01em; }
 .pc-doctitle { margin-left: auto; text-align: right; }
